@@ -66,7 +66,7 @@ $light-background: $base3;
 // are lighter and darker versions of the base.
 //
 
-$solorized-accent-yellow: (
+$solorized-yellow: (
   100: lighten($yellow, 40%),
   200: lighten($yellow, 30%),
   300: lighten($yellow, 20%),
@@ -89,7 +89,7 @@ $solorized-accent-yellow: (
   )
 );
 
-$solorized-accent-orange: (
+$solorized-orange: (
   100: lighten($orange, 40%),
   200: lighten($orange, 30%),
   300: lighten($orange, 20%),
@@ -112,7 +112,7 @@ $solorized-accent-orange: (
   )
 );
 
-$solorized-accent-red: (
+$solorized-red: (
   100: lighten($red, 40%),
   200: lighten($red, 30%),
   300: lighten($red, 20%),
@@ -135,7 +135,7 @@ $solorized-accent-red: (
   )
 );
 
-$solorized-accent-magenta: (
+$solorized-magenta: (
   100: lighten($magenta, 40%),
   200: lighten($magenta, 30%),
   300: lighten($magenta, 20%),
@@ -158,7 +158,7 @@ $solorized-accent-magenta: (
   )
 );
 
-$solorized-accent-violet: (
+$solorized-violet: (
   100: lighten($violet, 40%),
   200: lighten($violet, 30%),
   300: lighten($violet, 20%),
@@ -181,7 +181,7 @@ $solorized-accent-violet: (
   )
 );
 
-$solorized-accent-blue: (
+$solorized-blue: (
   100: lighten($blue, 40%),
   200: lighten($blue, 30%),
   300: lighten($blue, 20%),
@@ -204,7 +204,7 @@ $solorized-accent-blue: (
   )
 );
 
-$solorized-accent-cyan: (
+$solorized-cyan: (
   100: lighten($cyan, 40%),
   200: lighten($cyan, 30%),
   300: lighten($cyan, 20%),
@@ -227,7 +227,7 @@ $solorized-accent-cyan: (
   )
 );
 
-$solorized-accent-green: (
+$solorized-green: (
   100: lighten($green, 40%),
   200: lighten($green, 30%),
   300: lighten($green, 20%),
@@ -330,7 +330,7 @@ $solorized-dark-theme-foreground: (
 
 
 // Creates a container object for a light theme to be given to individual component theme mixins.
-@function solorized-light-theme($primary, $accent, $warn: mat-palette($solorized-accent-red)) {
+@function solorized-light-theme($primary, $accent, $warn: mat-palette($solorized-red)) {
   @return (
     primary: $primary,
     accent: $accent,
@@ -342,7 +342,7 @@ $solorized-dark-theme-foreground: (
 }
 
 // Creates a container object for a dark theme to be given to individual component theme mixins.
-@function solorized-dark-theme($primary, $accent, $warn: mat-palette($solorized-accent-red)) {
+@function solorized-dark-theme($primary, $accent, $warn: mat-palette($solorized-red)) {
   @return (
     primary: $primary,
     accent: $accent,
@@ -369,13 +369,13 @@ $solorized-dark-theme-foreground: (
 
 
 // define the default primary, accent, and warn material pallets
-$default-light-primary: mat-palette($solorized-accent-cyan, 900);
-$default-light-accent:  mat-palette($solorized-accent-cyan);
-$default-light-warn:    mat-palette($solorized-accent-red);
+$default-light-primary: mat-palette($solorized-cyan, 900);
+$default-light-accent:  mat-palette($solorized-cyan);
+$default-light-warn:    mat-palette($solorized-red);
 
-$default-dark-primary: mat-palette($solorized-accent-cyan, 900);
-$default-dark-accent:  mat-palette($solorized-accent-cyan);
-$default-dark-warn:    mat-palette($solorized-accent-red);
+$default-dark-primary: mat-palette($solorized-cyan, 900);
+$default-dark-accent:  mat-palette($solorized-cyan);
+$default-dark-warn:    mat-palette($solorized-red);
 
 
 // define the light and dark themes with the solorized background and
