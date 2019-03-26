@@ -15,6 +15,7 @@
 // based on those colors.
 
 @import "~@angular/material/theming";
+@include mat-core();
 
 // define the solorized colors
 // monotone-dark
@@ -65,6 +66,7 @@ $light-background: $base3;
 // case we use hue 500 for the base solorized color, other hues
 // are lighter and darker versions of the base.
 //
+
 
 $solorized-yellow: (
   100: lighten($yellow, 40%),
@@ -250,7 +252,29 @@ $solorized-green: (
   )
 );
 
-@include mat-core();
+// These monotone palettes are used for the default solorized themes.
+$solorized-monotone-light: (
+  100: $base3,
+  500: $base2,
+  700: $base1,
+  contrast: (
+    100: $dark-primary-text,
+    500: $dark-primary-text,
+    700: $dark-primary-text
+  )
+);
+
+$solorized-monotone-dark: (
+  100: $base01,
+  500: $base02,
+  700: $base03,
+  contrast: (
+    100: $light-primary-text,
+    500: $light-primary-text,
+    700: $light-primary-text
+  )
+);
+
 
 // Define the solorized foreground and background palette for light themes.
 
@@ -369,13 +393,13 @@ $solorized-dark-theme-foreground: (
 
 
 // define the default primary, accent, and warn material pallets
-$default-light-primary: mat-palette($solorized-cyan, 900);
-$default-light-accent:  mat-palette($solorized-cyan);
-$default-light-warn:    mat-palette($solorized-red);
+$default-light-primary: mat-palette($solorized-monotone-dark);
+$default-light-accent:  mat-palette($solorized-monotone-dark);
+$default-light-warn:    mat-palette($solorized-monotone-dark);
 
-$default-dark-primary: mat-palette($solorized-cyan, 900);
-$default-dark-accent:  mat-palette($solorized-cyan);
-$default-dark-warn:    mat-palette($solorized-red);
+$default-dark-primary: mat-palette($solorized-monotone-light);
+$default-dark-accent:  mat-palette($solorized-monotone-light);
+$default-dark-warn:    mat-palette($solorized-monotone-light);
 
 
 // define the light and dark themes with the solorized background and
